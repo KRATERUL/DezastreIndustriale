@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #000;
+  color: white;
+}
+/* TOP NAVIGATION */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 77, 0, 0.4);
+}
+
+.nav-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ff4d00;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover underline effect */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #ff4d00;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff4d00;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background: url('IMAGES/beirut_helicopter_backgound.png') center/cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.65);
+  z-index: 1;
+}
+
+.warning-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* WARNING IMAGE */
+.warning-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* controls space between image, text, and button */
+  z-index: 2;
+  text-align: center;
+}
+
+.warning-sign {
+  width: clamp(180px, 25vw, 320px);
+  height: auto;
+  margin: 0; /* remove default margins */
+  filter: drop-shadow(0 0 25px rgba(255, 0, 0, 0.6));
+}
+
+.warning-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.warning-text h1 {
+  margin: 0; /* remove default h1 margins */
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  color: #ff4d00;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(255,60,0,0.8), 0 0 20px rgba(255,80,0,0.6);
+}
+
+
+
+/* ENTER BUTTON */
+#enterButton {
+  margin-top: 40px;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: #ff4d00;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#enterButton:hover {
+  background: #ff1a00;
+}
+
+/* SCROLLABLE CONTENT */
+.content {
+  padding: 80px 10%;
+  background: #0f0f0f;
+  min-height: 100vh;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff4d00;
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #ccc;
+}
