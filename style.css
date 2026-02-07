@@ -171,3 +171,54 @@ body, html {
   margin-bottom: 20px;
   color: #ccc;
 }
+/* INFO BOX - SMALL & STATIC */
+.info-wrapper {
+  top: 90px; /* space below navbar */
+  margin-left: 8%;
+  position: relative;
+  display: inline-block;
+  z-index: 5;
+}
+
+.info-icon {
+  width: 28px;
+  height: 28px;
+  background: #ff4d00;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Tooltip */
+.info-tooltip {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 220px;
+  background: #111;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 77, 0, 0.4);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.info-tooltip p {
+  font-size: 0.8rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Show on hover */
+.info-wrapper:hover .info-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
