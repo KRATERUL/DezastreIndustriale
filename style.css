@@ -52,7 +52,7 @@ body, html {
   transition: 0.3s;
 }
 
-/* Hover underline effect */
+/* HOVER EFFECT*/
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -103,7 +103,7 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px; /* controls space between image, text, and button */
+  gap: 15px; 
   z-index: 2;
   text-align: center;
 }
@@ -111,7 +111,7 @@ body, html {
 .warning-sign {
   width: clamp(180px, 25vw, 320px);
   height: auto;
-  margin: 0; /* remove default margins */
+  margin: 0; 
   filter: drop-shadow(0 0 25px rgba(255, 0, 0, 0.6));
 }
 
@@ -124,7 +124,7 @@ body, html {
 }
 
 .warning-text h1 {
-  margin: 0; /* remove default h1 margins */
+  margin: 0; 
   font-size: clamp(2rem, 5vw, 4.5rem);
   color: #ff4d00;
   font-weight: 700;
@@ -171,9 +171,9 @@ body, html {
   margin-bottom: 20px;
   color: #ccc;
 }
-/* INFO BOX - SMALL & STATIC */
+/* INFO BOX  */
 .info-wrapper {
-  top: 90px; /* space below navbar */
+  top: 90px; 
   margin-left: 8%;
   position: relative;
   display: inline-block;
@@ -194,7 +194,7 @@ body, html {
   cursor: pointer;
 }
 
-/* Tooltip */
+/* TOOLTIP */
 .info-tooltip {
   position: absolute;
   top: 35px;
@@ -217,8 +217,110 @@ body, html {
   line-height: 1.4;
 }
 
-/* Show on hover */
+/* HOVER INFOpopup */
 .info-wrapper:hover .info-tooltip {
   opacity: 1;
   visibility: visible;
+}
+
+/* HAZARD SECTION 1 */
+.hazard-types {
+  margin-top: 60px;
+  padding: 0 10%;
+}
+
+.hazard-types h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff4d00;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.hazard-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.hazard-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ff4d00;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(255, 77, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.hazard-icon img {
+  position: absolute;
+  width: 70%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hazard-item p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.hazard-item strong {
+  color: #ff4d00;
+}
+
+/* HAZARD SECTION 2 */
+.hazard-types2 {
+  margin-top: 60px;
+  padding: 0 10%;
+}
+
+.hazard-types2 h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff4d00;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.hazard-item2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.hazard-icon2 {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ff4d00;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(255, 77, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.hazard-icon2 img {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hazard-item2 p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.hazard-item2 strong {
+  color: #ff4d00;
 }
